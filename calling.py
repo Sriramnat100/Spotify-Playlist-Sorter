@@ -1,8 +1,7 @@
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth
-scope = "user-library-read"
+import lyricsgenius
 
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="",
-                                               client_secret="",
-                                               redirect_uri="http://localhost",
-                                               scope="user-library-read"))
+test = "lMdsrNvLWxMxTXXIGB1tPq1wVZpod-E-_PHhUPNSIfxpVloW38iAxgw2cG8Xptp8"
+
+genius = lyricsgenius.Genius(test)
+
+genius.search_artist("Taylor Swift", max_songs=1, sort="title")
